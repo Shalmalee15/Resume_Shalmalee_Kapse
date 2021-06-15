@@ -1,0 +1,142 @@
+%%%%%%%%%%%%%%%%%
+% This is an sample CV template created using altacv.cls
+% (v1.1.4, 27 July 2018) written by LianTze Lim (liantze@gmail.com). Now compiles with pdfLaTeX, XeLaTeX and LuaLaTeX.
+% 
+%% It may be distributed and/or modified under the
+%% conditions of the LaTeX Project Public License, either version 1.3
+%% of this license or (at your option) any later version.
+%% The latest version of this license is in
+%%    http://www.latex-project.org/lppl.txt
+%% and version 1.3 or later is part of all distributions of LaTeX
+%% version 2003/12/01 or later.
+%%%%%%%%%%%%%%%%
+
+%% If you need to pass whatever options to xcolor
+\PassOptionsToPackage{dvipsnames}{xcolor}
+
+%% If you are using \orcid or academicons
+%% icons, make sure you have the academicons 
+%% option here, and compile with XeLaTeX
+%% or LuaLaTeX.
+% \documentclass[10pt,a4paper,academicons]{altacv}
+
+%% Use the "normalphoto" option if you want a normal photo instead of cropped to a circle
+% \documentclass[10pt,a4paper,normalphoto]{altacv}
+
+\documentclass[10pt,a4paper]{altacv}
+%% AltaCV uses the fontawesome and academicon fonts
+%% and packages. 
+%% See texdoc.net/pkg/fontawecome and http://texdoc.net/pkg/academicons for full list of symbols.
+%% 
+%% Compile with LuaLaTeX for best results. If you
+%% want to use XeLaTeX, you may need to install
+%% Academicons.ttf in your operating system's font 
+%% folder.
+
+
+% Change the page layout if you need to
+\geometry{left=1cm,right=9cm,marginparwidth=6.8cm,marginparsep=1.2cm,top=1.25cm,bottom=1.25cm,footskip=2\baselineskip}
+
+% Change the font if you want to.
+
+% If using pdflatex:
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[default]{lato}
+\newcommand{\latex}{\LaTeX\xspace}
+% If using xelatex or lualatex:
+% \setmainfont{Lato}
+
+% Change the colours if you want to
+\definecolor{Navy}{HTML}{000080}
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{666666}
+\colorlet{heading}{Navy}
+\colorlet{accent}{Navy}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{LightGrey}
+
+
+% Change the bullets for itemize and rating marker
+% for \cvskill if you want to
+\renewcommand{\itemmarker}{{\small\textbullet}}
+\renewcommand{\ratingmarker}{\faCircle}
+%% sample.bib contains your publications
+\addbibresource{sample.bib}
+
+\usepackage{hyperref}
+
+\begin{document}
+
+\name{SHALMALEE KAPSE }
+\tagline{PhD Candidate in Data Intensive Astrophysics}
+\personalinfo{%
+  % Not all of these are required!
+  % You can add your own with \printinfo{symbol}{detail}
+  \email{kapse.shalmalee@gmail.com }
+  \phone{+61 406583748} 
+%  \homepage{www.homepage.com}
+%  \twitter{@twitterhandle}
+  \linkedin{\href{https://www.linkedin.com/in/shalmalee-kapse}{linkedin.com/in/shalmalee-kapse}}
+  \github{\href{https://www.github.com/Shalmalee15}{github.com/Shalmalee15}}
+  %% You MUST add the academicons option to \documentclass, then compile with LuaLaTeX or XeLaTeX, if you want to use \orcid or other academicons commands.
+%   \orcid{orcid.org/0000-0000-0000-0000}
+}
+
+%% Make the header extend all the way to the right, if you want. 
+\begin{fullwidth}
+\makecvheader
+\end{fullwidth}
+
+%% Depending on your tastes, you may want to make fonts of itemize environments slightly smaller
+% \AtBeginEnvironment{itemize}{\small}
+
+
+%% Provide the file name containing the sidebar contents as an optional parameter to \cvsection.
+%% You can always just use \marginpar{...} if you do
+%% not need to align the top of the contents to any
+%% \cvsection title in the "main" bar.
+\cvsection[page1sidebar]{Experience}
+\cvevent{Researcher}{Macquarie University}{May 2019 -- Present}{Sydney, Australia}
+\begin{itemize}
+\item Classified star clusters based on chemical compositions    
+\item Developed classification techniques for data from Hubble Space Telescope using \textbf{Python} \textit{(Numpy, Pandas, Matplotlib, Scipy)} 
+\item Used \textbf{Scikit-Learn}  to implement Machine Learning algorithms for pattern recognition in astrophysical data 
+\item Qualified in implementing calibration pipeline (HSTCAL) in my research 
+\end{itemize}
+\divider
+\cvevent{Casual Academic}{Macquarie University}{October 2019 -- Present}{Sydney, Australia}
+\begin{itemize}
+\item Supervisor for basic Physics and Astrophysics  
+\item Taught 88 undergraduate students in each class
+\end{itemize}
+\divider
+\cvevent{Research Assistant}{Centre for Modeling and Simulation }{March 2017 -- February 2019}{Pune, India}
+\begin{itemize}
+%\item Predicted a new phase of rock in the Earth's interior using the first principle methods in computational physics 
+\item Implemented \textbf{Evolutionary Algorithm} for prediction of new chemical compositions in rocks in Earth's interior
+\end{itemize}
+\divider
+\cvevent{Physics Tutor}{Chegg}{February 2016 -- February 2017}{Pune, India}
+\begin{itemize}
+\item Delivered lectures on Statistical Physics, Thermodynamics, Classical Physics to college students from the United States 
+\end{itemize}
+\divider
+\cvevent{Internships}{Department of Atomic Energy}{August -- September 2018}{Indore, India}
+\begin{itemize}
+\item Analysed healthcare data using numerical methods in C
+\end{itemize}
+\cvevent{}{Inter University Centre for Astronomy and Astrophysics}{May -- December 2015}{Pune, India}
+\begin{itemize}
+\item Applied Leapfrog and Runge-Kutta methods in C to analyse the effect of interaction between galactic disks and molecular clouds
+\end{itemize}
+\cvsection{Education}
+\cvevent{PhD in Astrophysics}{Macquarie University, Australia}{2019 -- 2022}{}
+\vspace{0.05cm}
+\cvevent{BSc and MSc in Physics}{Pune University, India}{2009 -- 2015}{}
+\end{document}
+
+
+
+
+
